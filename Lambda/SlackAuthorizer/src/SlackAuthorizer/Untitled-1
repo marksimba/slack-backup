@@ -1,0 +1,56 @@
+{
+    "body": {
+        "token": "Yz7CmIkbWTwsCjk9MZ2JwtyU",
+        "team_id": "T9PUT4GH0",
+        "api_app_id": "AC2DJJPU4",
+        "event": {
+            "client_msg_id": "d8c8f458-5938-49e8-a995-fb7d4f313f14",
+            "type": "message",
+            "text": "test",
+            "user": "U9PUT4GTU",
+            "ts": "1575700162.016300",
+            "team": "T9PUT4GH0",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "/oTw",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "test"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "thread_ts": "1575700127.016200",
+            "parent_user_id": "U9PUT4GTU",
+            "channel": "C9PSEKQ3D",
+            "event_ts": "1575700162.016300",
+            "channel_type": "channel"
+        },
+        "type": "event_callback",
+        "authed_teams": [
+            "T9PUT4GH0"
+        ],
+        "event_id": "EvRDSWF0Q0",
+        "event_time": 1575700162
+    },
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip,deflate",
+        "Content-Type": "application/json",
+        "Host": "b95ztyt1be.execute-api.us-west-2.amazonaws.com",
+        "User-Agent": "Slackbot 1.0 ( https://api.slack.com/robots)",
+        "X-Amzn-Trace-Id": "Root=1-5deb46c3-1f50bec07e61f7f099f60140",
+        "X-Forwarded-For": "54.221.186.90",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https",
+        "X-Slack-Request-Timestamp": "1575700163",
+        "X-Slack-Signature": "v0=195c79b60b340c6dab41e13abce55e2e1095ae3a65107c50fb7bdf9043f0b57b"
+    }
+}
