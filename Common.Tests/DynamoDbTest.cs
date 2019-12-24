@@ -17,7 +17,7 @@ namespace Common.Tests
         
         public DynamoDbTest()
         {
-            _creds = new BasicAWSCredentials("AKIAT3M4UPJXJRI4KGZV", "+RG+NZftosCe0ssljiw0EL7R35RwCZW+QoCBrAsb");
+            _creds = new BasicAWSCredentials("", "");
             _table = "slack";
             _dynamo = new Dynamo(_table, _creds);
         }
