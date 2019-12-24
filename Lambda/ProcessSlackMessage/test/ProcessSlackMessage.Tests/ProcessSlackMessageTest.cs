@@ -11,9 +11,7 @@ using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
 using Amazon.Runtime;
 
-using ProcessSlackMessage;
-
-namespace ProcessSlackMessage.Tests
+namespace Lambda.Tests
 {
     public class ProcessSlackMessageTest
     {

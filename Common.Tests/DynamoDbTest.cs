@@ -4,15 +4,16 @@ using Amazon.Runtime;
 using Xunit;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
+using Common.AWS;
 
 namespace Common.Tests
 {
     public class DynamoDbTest
     {
 
-        string _table;
-        Dynamo _dynamo;
-        BasicAWSCredentials _creds;
+        private string _table;
+        private Dynamo _dynamo;
+        private BasicAWSCredentials _creds;
         
         public DynamoDbTest()
         {

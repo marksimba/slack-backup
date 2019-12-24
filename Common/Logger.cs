@@ -10,10 +10,10 @@ namespace Common
     }
     public class Log
     {
-        String _type;
-        Severity _severity;
-        DateTime _timeStamp;
-        String _message;
+        private String _type;
+        private Severity _severity;
+        private DateTime _timeStamp;
+        private String _message;
 
         public Log(String type, Severity severity, DateTime timestamp, String message)
         {
@@ -31,7 +31,7 @@ namespace Common
     }
     public class Logger
     {
-        Guid _sessionId;
+        private Guid _sessionId;
         public Logger()
         {
             _sessionId = Guid.NewGuid();

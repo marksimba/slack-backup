@@ -6,8 +6,8 @@ namespace Common.Tests
 {
     public class GoogleDriveTest
     {
-        GoogleDrive _googleDrive;
-        BasicAWSCredentials _creds;
+        private GoogleDrive _googleDrive;
+        private BasicAWSCredentials _creds;
         
         public GoogleDriveTest()
         {

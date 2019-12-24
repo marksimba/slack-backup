@@ -15,12 +15,13 @@ using Amazon;
 using Amazon.SQS.Model;
 using Common;
 using Common.Slack.DataModels;
+using Common.AWS;
 using Newtonsoft.Json;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
-namespace SlackSignatureVerification
+namespace Lambda
 {
     public class SlackSignatureVerification
     {

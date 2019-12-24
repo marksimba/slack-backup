@@ -10,9 +10,7 @@ using Newtonsoft.Json;
 
 using Common.Slack.DataModels;
 
-using SlackSignatureVerification;
-
-namespace SlackSignatureVerification.Tests
+namespace Lambda.Tests
 {
     public class SlackSignatureVerificationTest
     {
@@ -52,7 +50,7 @@ namespace SlackSignatureVerification.Tests
         }
 
         [Fact]
-        public void TestToUpperFunction()
+        public void FunctionHandlerTest()
         {
 
             // Invoke the lambda function and confirm the string was upper cased.

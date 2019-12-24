@@ -9,6 +9,7 @@ using Common.Slack.DataModels;
 using Common.Slack.ResponseModels;
 using Amazon;
 using Amazon.SQS.Model;
+using Common.AWS;
 using Newtonsoft.Json;
 using Amazon.Runtime;
 using SlackDataModels = Common.Slack.DataModels;
@@ -18,7 +19,7 @@ using Amazon.Lambda.Core;
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
-namespace SlackBackup
+namespace Lambda
 {
     public class SlackBackup
     {
@@ -95,41 +96,6 @@ namespace SlackBackup
 
                 //Creates Folder for Channel
                 string channelFolder = _googleDrive.CreateFolder(channel.id, parents);
-                //If parents is larger than 1, remove the last element. 
-                //It will only be larger than one after the first file has been transferred. 
-                // if(parents.Count > 1)
-                // {
-                //     parents.RemoveAt(parents.Count - 1);
-                // }
-
-                // parents.Add(channelFolder);
-                
-                // List<Message> messages = GetAllMessages(channel.id);
-                // int fileCount = 0;
-                // _logger.WriteLine("messages", Severity.Info, DateTime.Now, $"Processing {messages.Count} messages for channel `{channel.id}`");
-                // foreach(Message message in messages)
-                // {
-                //     if(message.files != null)
-                //     {
-
-                //         fileCount += message.files.Count;
-                //         foreach(SlackDataModels :: File file in message.files)
-                //         {
-                //             if(file.mode == "tombstone") //File was upload, but has been deleted.
-                //             {
-                //                 continue;
-                //             }
-                //             //Transfer to Google Drive
-                //             //_logger.WriteLine("file-transfer", Severity.Info, DateTime.Now, $"Fake Transfering File: {file.id} to Google Drive");
-                //             Stream stream = _slack.DownloadFile(file.url_private, file.id);
-                //             _googleDrive.UploadFile(file, stream, parents);
-                //             //Files arent't automatically tied to messages
-                //             file.messageTs = message.ts;
-                //             Status fileStatus = await CreateOrUpdateItem(file.id, "file", JsonConvert.SerializeObject(file), channel.id, message.ts);
-                //         }
-                //     }
-                //     await CreateOrUpdateItem(message.ts, "message", JsonConvert.SerializeObject(message), channel.id);
-                // }
             }
 
             return 0;

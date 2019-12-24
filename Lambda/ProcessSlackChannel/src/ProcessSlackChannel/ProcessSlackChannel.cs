@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 
 using Common.Slack.DataModels;
 using Common.AWS.DataModels;
+using Common.AWS;
 using Common.Slack;
 using Common;
 
@@ -18,7 +19,7 @@ using Amazon.SQS.Model;
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
-namespace ProcessSlackChannel
+namespace Lambda
 {
     public class ProcessSlackChannel
     {

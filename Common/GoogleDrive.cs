@@ -20,11 +20,11 @@ namespace Common
     public class GoogleDrive
     {
         private DriveService _google;
-        UserCredential _googleCredential;
+        private UserCredential _googleCredential;
         private readonly IAmazonS3 _s3Client;
         private readonly Logger _logger;
         private static string[] _scopes = { DriveService.Scope.DriveFile };
-        static string _applicationName = "Slack Backup";
+        private static string _applicationName = "Slack Backup";
         public GoogleDrive()
         {
             _logger = new Logger();
@@ -38,6 +38,11 @@ namespace Common
             _s3Client = new AmazonS3Client(credentials, RegionEndpoint.USWest2);
             _google = AuthorizeGoogleCredentials().Result;
         }
+
+        /// <summary>
+        /// A Function that authorizes the saved google credentials
+        /// </summary>
+        /// <returns>DriveService</returns>  
 
         private async Task<DriveService> AuthorizeGoogleCredentials()
         {
@@ -116,6 +121,13 @@ namespace Common
 
         }
 
+        /// <summary>
+        /// A Function that takes a name, and optional parents, and creates a folder.
+        /// </summary>
+        /// <param name="name">Folder name</param>
+        /// <param name="parents">Optional list of folder parents</param>
+        /// <returns>Folder Id</returns>  
+
         public string CreateFolder(string name, List<string> parents = null)
         {
             //See if Folder already exists
@@ -146,6 +158,13 @@ namespace Common
                 return id;
             }
         }
+
+        /// <summary>
+        /// A Function that takes a stream and uploads the file to Google Drive
+        /// </summary>
+        /// <param name="file">SlackDataModels file</param>
+        /// <param name="stream"> File Stream</param>
+        /// <param name="parents">Optional list of file parents</param>
 
         public void UploadFile(SlackDataModels :: File file, Stream stream, List<string> parents = null)
         {

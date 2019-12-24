@@ -5,7 +5,7 @@ namespace Common.Tests
 {
     public class LoggerTest
     {
-        Logger _logger;
+        private Logger _logger;
 
         public LoggerTest()
         {

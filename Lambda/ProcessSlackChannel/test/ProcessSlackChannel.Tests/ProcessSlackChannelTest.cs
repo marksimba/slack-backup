@@ -10,13 +10,11 @@ using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
 using Amazon.Runtime;
 
-using ProcessSlackChannel;
-
-namespace ProcessSlackChannel.Tests
+namespace Lambda.Tests
 {
     public class ProcessSlackChannelTest
     {
-        BasicAWSCredentials _creds;
+        private BasicAWSCredentials _creds;
         public ProcessSlackChannelTest()
         {
             //Channel to message
@@ -35,8 +33,6 @@ namespace ProcessSlackChannel.Tests
             Environment.SetEnvironmentVariable("GOOGLEDRIVETOKENDIRECTORY", "");
             // Where Where the reponse file is saved locally
             Environment.SetEnvironmentVariable("GOOGLEDRIVETOKENRESPONSEFILE", "");
-            // Where the credential file is located on s3
-            Environment.SetEnvironmentVariable("GOOGLEDRIVETOKENS3CREDENTIALKEY", "credentials.json");
             // Where the reponse file is is located on s3
             Environment.SetEnvironmentVariable("GOOGLEDRIVETOKENS3TOKENRESPONSEKEY", "");
             // The s3 bucket to get your google creds
