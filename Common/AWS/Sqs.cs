@@ -6,13 +6,13 @@ using Amazon.SQS;
 using Amazon.SQS.Model;
 using System.Threading.Tasks;
 
-namespace Common
+namespace Common.AWS
 {
     public class SQS
     {
-        AmazonSQSClient _client;
-        string _table;
-        RegionEndpoint _region = RegionEndpoint.USWest2;
+        private AmazonSQSClient _client;
+        private string _table;
+        private RegionEndpoint _region = RegionEndpoint.USWest2;
 
         public SQS(BasicAWSCredentials credentials, RegionEndpoint region = null)
         {

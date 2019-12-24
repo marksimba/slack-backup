@@ -8,7 +8,7 @@ using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
 using Amazon.Runtime;
 
-namespace SlackBackup.Tests
+namespace Lambda.Tests
 {
     public class SlackBackupTest
     {

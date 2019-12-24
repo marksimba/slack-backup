@@ -9,6 +9,19 @@
   ],
 
   "profile":"personal",
+  "environmentVariables" : {
+    "CHANNEL": "",
+    "SLACKTOKEN": "",
+    "MESSAGEQUEUE": "",
+    "USERQUEUE":"",
+    "CHANNELQUEUE":"",
+    "TABLE":"",
+    "GOOGLEDRIVETOKENDIRECTORY": "",
+    "GOOGLEDRIVETOKENRESPONSEFILE": "",
+    "GOOGLEDRIVETOKENS3TOKENRESPONSEKEY": "",
+    "S3BUCKET":"",
+    "SLACKSIGNATUREVERSION": ""
+  },
   "region" : "us-west-2",
   "configuration" : "Release",
   "framework" : "netcoreapp2.1",

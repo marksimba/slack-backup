@@ -6,7 +6,7 @@ using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
 using System.Threading.Tasks;
 
-namespace Common
+namespace Common.AWS
 {
     public enum Status
     {
@@ -15,9 +15,9 @@ namespace Common
     }
     public class Dynamo
     {
-        AmazonDynamoDBClient _client;
-        string _table;
-        RegionEndpoint _region = RegionEndpoint.USWest2;
+        private AmazonDynamoDBClient _client;
+        private string _table;
+        private RegionEndpoint _region = RegionEndpoint.USWest2;
 
         // Constructer only used for testing
         public Dynamo(string table, BasicAWSCredentials credentials, RegionEndpoint region = null)

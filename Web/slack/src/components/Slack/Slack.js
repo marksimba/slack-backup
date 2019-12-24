@@ -162,9 +162,6 @@ const Slack = ({
                     <Grid.Column width={1} style={{
                         padding: '0px'
                     }}>
-                            <Button basic>
-                                Search
-                            </Button>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
