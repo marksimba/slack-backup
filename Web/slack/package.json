@@ -8,7 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "async": "^3.1.0",
-    "aws-sdk": "^2.592.0",
+    "aws-sdk": "^2.814.0",
     "history": "^4.10.1",
     "lodash": "^4.17.15",
     "react": "^16.12.0",
